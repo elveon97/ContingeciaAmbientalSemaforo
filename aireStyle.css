@@ -1,0 +1,182 @@
+.aire-container {
+  width: 350px;
+  height: 218px;
+}
+
+.aire-wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;
+  font-family: sans-serif;
+  background-image: url("img/SEMAFOROfondoinformacion_Mesa de trabajo 4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.aire-titulo-container {
+  background-color: #110C49;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150%;
+  font-weight: bolder;
+  color: white;
+}
+
+.aire-mid-container {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aire-img-wrap {
+  width: 100%;
+  height: 27%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aire-footer-container {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60%;
+  font-weight: bold;
+}
+
+.aire-mid-section {
+  height: 100%;
+  width: 33%;
+}
+
+.aire-mid-bar {
+  height: 90%;
+  width: 0.2%;
+  background-color: #B6B6B6;
+}
+
+.aire-mid-title {
+  height: 35%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80%;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.aire-mid-content {
+  height: 65%;
+  width: 100%;
+  font-size: 100%;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.huracan-sm-section {
+  width: 20%;
+  height: 100%;
+  padding-top: 2px;
+  display: flex;
+  flex-flow: column;
+}
+
+.huracan-md-section {
+  width: 25%;
+  height: 100%;
+  padding-top: 2px;
+  display: flex;
+  flex-flow: column;
+}
+
+.huracan-lg-section {
+  width: 35%;
+  height: 100%;
+  padding-top: 2px;
+  display: flex;
+  flex-flow: column;
+}
+
+.huracan-mid-container {
+  display: flex;
+  font-weight: bolder;
+  width: 100%;
+  height: 25%;
+  text-align: center;
+}
+
+.huracan-mid-title {
+  width: 100%;
+  height: 20%;
+  font-size: 10px;
+  text-align: center;
+}
+
+.huracan-section-cell {
+  width: 100%;
+  height: 80%;
+  font-size: 12px;
+}
+
+.huracan-section-sm-cell {
+  width: 100%;
+  height: 30%;
+  font-size: 12px;
+}
+
+.huracan-categoria {
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+.huracan-valoracion {
+  width: 100%;
+  height: 10%;
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.huracan-img-wrap {
+  width: 100%;
+  height: 27%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.volcan-mid-title {
+  height: 30%;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: bolder;
+}
+
+.volcan-mid-section {
+  height: 70%;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.volcan-mid-container {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-flow: column;
+}
