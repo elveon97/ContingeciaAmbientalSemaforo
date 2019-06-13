@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <title></title>
 
-    <link rel="stylesheet" href="aireStyle.css">
+    <link rel="stylesheet" href="contingenciaAmbiental/aireStyle.css">
   </head>
   <body>
 
      <?php
-       $fileName = "aireConf.txt";
+       $fileName = "contingenciaAmbiental/aireConf.txt";
        $conf = parse_ini_file($fileName, true);
        if ($conf['USE'] == 'Aire') :
      ?>
@@ -48,7 +48,7 @@
            </div>
          </div>
          <div class="aire-img-wrap">
-           <img src="img/aire/sem<?php echo $conf["A_SEM"]; ?>.png" alt="" style="width: 98%; height: 100%;">
+           <img src="imgContingenciaAmbiental/aire/sem<?php echo $conf["A_SEM"]; ?>.png" alt="" style="width: 98%; height: 100%;">
          </div>
          <div class="aire-footer-container">
            Medición realizada el <?php echo $conf['A_DIA']; ?> de <?php echo $conf['A_MES']; ?> de <?php echo $conf['A_ANO']; ?>, a las <?php echo $conf['A_HORA']; ?> en el CUSur
@@ -97,13 +97,13 @@
                 Rachas de viento:
               </div>
               <div class="huracan-section-sm-cell">
-                <?php echo $conf['RACHAS']; ?>
+                <?php echo $conf['RACHAS']; ?> Km/hr
               </div>
               <div class="huracan-mid-title">
                 Rachas de viento:
               </div>
               <div class="huracan-section-sm-cell">
-                <?php echo $conf['M2']; ?>
+                <?php echo $conf['M2']; ?> m²
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@
             <?php echo $conf['H_VAL']; ?>
           </div>
           <div class="huracan-img-wrap">
-            <img src="img/huracan/semHur<?php echo $conf['CATEGORIA']; ?>.png" alt="" style="width: 80%; height: 100%;">
+            <img src="imgContingenciaAmbiental/huracan/semHur<?php echo $conf['CATEGORIA']; ?>.png" alt="" style="width: 80%; height: 100%;">
           </div>
           <div class="aire-footer-container">
             Medición publicada el <?php echo $conf['H_DIA']; ?> de <?php echo $conf['H_MES']; ?> de <?php echo $conf['H_ANO']; ?>, a las <?php echo $conf['H_HORA']; ?> horas en el CUSur
@@ -133,7 +133,7 @@
             </div>
           </div>
           <div class="huracan-img-wrap">
-            <img src="img/volcan/semVol<?php echo $conf['V_FASE']; ?>.png" alt="" style="width: 55%; height: 100%;">
+            <img src="imgContingenciaAmbiental/volcan/semVol<?php echo $conf['V_FASE']; ?>.png" alt="" style="width: 55%; height: 100%;">
           </div>
           <div class="aire-footer-container">
             Medición publicada el <?php echo $conf['V_DIA']; ?> de <?php echo $conf['V_MES']; ?> de <?php echo $conf['V_ANO']; ?>, a las <?php echo $conf['V_HORA']; ?> horas en el CUSur
@@ -142,7 +142,7 @@
       </div>
     <?php endif; ?>
 
-     <img src="img/UIPC.png" style="width: 350px;" alt="">
+    <a href="https://www.facebook.com/PCivilCusur/"><img src="imgContingenciaAmbiental/UIPC.png" style="width: 350px;" alt=""></a>     
 
   </body>
 </html>

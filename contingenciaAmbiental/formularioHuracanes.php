@@ -22,7 +22,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <img src="logo.jpg" alt="" style="width: 380px; height: 82px;">
+        <img src="../imgContingenciaAmbiental/logo.jpg" alt="" style="width: 380px; height: 82px;">
       </div>
       <div class="row">
         <h2 style="margin-top: 40px;">Medición de huracanes CUSur</h2>
