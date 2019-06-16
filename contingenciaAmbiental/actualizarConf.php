@@ -20,6 +20,7 @@
     $cad .= "A_INFO = " . $conf['A_INFO'] . "\n";
 
     $cad .= "V_FASE = " . $conf['V_FASE'] . "\n";
+    $cad .= "V_COLOR = " . $conf['V_COLOR'] . "\n";
     $cad .= "V_DIA = " . $conf['V_DIA'] . "\n";
     $cad .= "V_MES = " . $conf['V_MES'] . "\n";
     $cad .= "V_ANO = " . $conf['V_ANO'] . "\n";
@@ -95,6 +96,7 @@
     $cad .= "H_INFO = " . $conf['H_INFO'] . "\n";
 
     $cad .= "V_FASE = " . $conf['V_FASE'] . "\n";
+    $cad .= "V_COLOR = " . $conf['V_COLOR'] . "\n";
     $cad .= "V_DIA = " . $conf['V_DIA'] . "\n";
     $cad .= "V_MES = " . $conf['V_MES'] . "\n";
     $cad .= "V_ANO = " . $conf['V_ANO'] . "\n";
@@ -205,6 +207,7 @@
     $cad .= "H_INFO = " . $conf['H_INFO'] . "\n";
 
     $cad .= "V_FASE = " . $_POST['Fase'] . "\n";
+    $cad .= "V_COLOR = " . $_POST['color'] . "\n";
 
     list($ano, $mes, $dia) = explode('-', $_POST['Fecha']);
     $aux2 = "";

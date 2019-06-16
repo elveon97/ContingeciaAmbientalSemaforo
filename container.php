@@ -138,7 +138,7 @@
             </div>
           </div>
           <div class="huracan-img-wrap">
-            <img src="imgContingenciaAmbiental/volcan/semVol<?php echo $conf['V_FASE']; ?>.png" alt="" style="width: 55%; height: 100%;">
+            <img src="imgContingenciaAmbiental/volcan/semVol<?php echo $conf['V_COLOR']; ?>.png" alt="" style="width: 55%; height: 100%;">
           </div>
           <div class="aire-footer-container">
             Medición publicada el <?php echo $conf['V_DIA']; ?> de <?php echo $conf['V_MES']; ?> de <?php echo $conf['V_ANO']; ?>, a las <?php echo $conf['V_HORA']; ?> horas en el CUSur

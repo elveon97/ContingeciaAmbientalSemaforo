@@ -30,7 +30,19 @@
             <input type="hidden" name="form" id="form" value="Volcan">
             <div class="form-group">
               <label for="inputFase">Fase</label>
-              <input type="number" class="form-control" id="inputFase" name="Fase" aria-describedby="emailHelp" placeholder="Ingrese fase" required>
+              <select class="form-control" name="Fase">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputInfo">Color del semáforo</label>
+              <select class="form-control" name="color">
+                <option value="verde">Verde</option>
+                <option value="amarillo">Amarillo</option>
+                <option value="rojo">Rojo</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="inputInfo">Información para el usuario</label>
