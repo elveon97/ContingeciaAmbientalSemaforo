@@ -9,6 +9,50 @@
     header("Location: login.php?error=1");
     die();
   }
+
+  $fileName = "aireConf.txt";
+  $conf = parse_ini_file($fileName, true);
+
+  $fecha = $conf['H_ANO'] . '-';
+  switch ($conf['H_MES']) {
+    case "enero":
+      $fecha .= "01";
+      break;
+    case "febrero":
+      $fecha .= "02";
+      break;
+    case "marzo":
+      $fecha .= "03";
+      break;
+    case "abril":
+      $fecha .= "04";
+      break;
+    case "mayo":
+      $fecha .= "05";
+      break;
+    case "junio":
+      $fecha .= "06";
+      break;
+    case "julio":
+      $fecha .= "07";
+      break;
+    case "agosto":
+      $fecha .= "08";
+      break;
+    case "septiembre":
+      $fecha .= "09";
+      break;
+    case "octubre":
+      $fecha .= "10";
+      break;
+    case "noviembre":
+      $fecha .= "11";
+      break;
+    case "diciembre":
+      $fecha .= "12";
+      break;
+  }
+  $fecha .= "-" . $conf['H_DIA'];
 ?>
 
 <!DOCTYPE html>
@@ -31,40 +75,46 @@
           <input type="hidden" name="form" id="form" value="Huracanes">
             <div class="form-group">
               <label for="inputNombre">Nombre</label>
-              <input type="text" class="form-control" id="inputNombre" name="Nombre" aria-describedby="emailHelp" placeholder="Ingrese nombre del huracán" required>
+              <input type="text" class="form-control" id="inputNombre" value="<?php echo $conf['NOMBRE']; ?>" name="Nombre" aria-describedby="emailHelp" placeholder="Ingrese nombre del huracán" required>
             </div>
             <div class="form-group">
               <label for="inputCategoria">Categoría</label>
-              <input type="number" class="form-control" id="inputCategoria" name="Categoria" placeholder="Ingrese categoría del huracán" required>
+              <select class="form-control" name="Categoria">
+                <option value="1" <?php if ($conf["CATEGORIA"] == "1") echo "selected='selected'"; ?>>1</option>
+                <option value="2" <?php if ($conf["CATEGORIA"] == "2") echo "selected='selected'"; ?>>2</option>
+                <option value="3" <?php if ($conf["CATEGORIA"] == "3") echo "selected='selected'"; ?>>3</option>
+                <option value="4" <?php if ($conf["CATEGORIA"] == "4") echo "selected='selected'"; ?>>4</option>
+                <option value="5" <?php if ($conf["CATEGORIA"] == "5") echo "selected='selected'"; ?>>5</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="inputUbicacion">Ubicación</label>
-              <input type="text" class="form-control" id="inputUbicacion" name="Ubicacion" placeholder="Ingrese ubicación" required>
+              <input type="text" class="form-control" id="inputUbicacion" value="<?php echo $conf['UBICACION']; ?>" name="Ubicacion" placeholder="Ingrese ubicación" required>
             </div>
             <div class="form-group">
               <label for="inputRachas">Rachas de viento (km/hr)</label>
-              <input type="number" class="form-control" id="inputRachas" name="Rachas" placeholder="Ingrese rachas de viento en km/hr" required>
+              <input type="number" class="form-control" id="inputRachas" value="<?php echo $conf['RACHAS']; ?>" name="Rachas" placeholder="Ingrese rachas de viento en km/hr" required>
             </div>
             <div class="form-group">
               <label for="inputM2">m²</label>
-              <input type="number" class="form-control" id="inputM2" name="M2" placeholder="Ingrese m²" required>
+              <input type="number" class="form-control" id="inputM2" value="<?php echo $conf['M2']; ?>" name="M2" placeholder="Ingrese m²" required>
             </div>
             <div class="form-group">
               <label for="inputValoracion">Valoración</label>
-              <input type="text" class="form-control" id="inputValoracion" name="Valoracion" placeholder="Ingrese valoración" required>
+              <input type="text" class="form-control" id="inputValoracion" value="<?php echo $conf['H_VAL']; ?>" name="Valoracion" placeholder="Ingrese valoración" required>
             </div>
             <div class="form-group">
               <label for="inputInfo">Información para el usuario</label>
-              <input type="text" class="form-control" id="inputInfo" name="info" placeholder="Ingrese el enlace donde se encuentra la información para el usuario" required>
+              <input type="text" class="form-control" id="inputInfo" name="info" value="<?php echo $conf['H_INFO']; ?>" placeholder="Ingrese el enlace donde se encuentra la información para el usuario" required>
             </div>
             <hr>
             <div class="form-group">
               <label for="inputFecha">Fecha de publicación</label>
-              <input type="date" class="form-control" id="inputFecha" name="Fecha" placeholder="Ingrese fecha de medición" required>
+              <input type="date" class="form-control" id="inputFecha" name="Fecha" value="<?php echo $fecha; ?>" placeholder="Ingrese fecha de medición" required>
             </div>
             <div class="form-group">
               <label for="inputTime">Hora de publicación</label>
-              <input type="time" class="form-control" id="inputHora" name="Hora" placeholder="Ingrese hora de medición" required>
+              <input type="time" class="form-control" id="inputHora" name="Hora" value="<?php echo $conf['H_HORA']; ?>" placeholder="Ingrese hora de medición" required>
             </div>
             <button type="submit" class="btn btn-success">Actualizar</button>
             <a href="menu.php" class="btn btn-primary">Regresar</a>

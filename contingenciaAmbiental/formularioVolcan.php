@@ -9,6 +9,50 @@
     header("Location: login.php?error=1");
     die();
   }
+
+  $fileName = "aireConf.txt";
+  $conf = parse_ini_file($fileName, true);
+
+  $fecha = $conf['V_ANO'] . '-';
+  switch ($conf['V_MES']) {
+    case "enero":
+      $fecha .= "01";
+      break;
+    case "febrero":
+      $fecha .= "02";
+      break;
+    case "marzo":
+      $fecha .= "03";
+      break;
+    case "abril":
+      $fecha .= "04";
+      break;
+    case "mayo":
+      $fecha .= "05";
+      break;
+    case "junio":
+      $fecha .= "06";
+      break;
+    case "julio":
+      $fecha .= "07";
+      break;
+    case "agosto":
+      $fecha .= "08";
+      break;
+    case "septiembre":
+      $fecha .= "09";
+      break;
+    case "octubre":
+      $fecha .= "10";
+      break;
+    case "noviembre":
+      $fecha .= "11";
+      break;
+    case "diciembre":
+      $fecha .= "12";
+      break;
+  }
+  $fecha .= "-" . $conf['V_DIA'];
 ?>
 
 <!DOCTYPE html>
@@ -31,31 +75,31 @@
             <div class="form-group">
               <label for="inputFase">Fase</label>
               <select class="form-control" name="Fase">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+                <option value="1" <?php if ($conf["V_FASE"] == "1") echo "selected='selected'"; ?>>1</option>
+                <option value="2" <?php if ($conf["V_FASE"] == "2") echo "selected='selected'"; ?>>2</option>
+                <option value="3" <?php if ($conf["V_FASE"] == "3") echo "selected='selected'"; ?>>3</option>
               </select>
             </div>
             <div class="form-group">
               <label for="inputInfo">Color del semáforo</label>
               <select class="form-control" name="color">
-                <option value="verde">Verde</option>
-                <option value="amarillo">Amarillo</option>
-                <option value="rojo">Rojo</option>
+                <option value="verde" <?php if ($conf["V_COLOR"] == "verde") echo "selected='selected'"; ?>>Verde</option>
+                <option value="amarillo" <?php if ($conf["V_COLOR"] == "amarillo") echo "selected='selected'"; ?>>Amarillo</option>
+                <option value="rojo" <?php if ($conf["V_COLOR"] == "rojo") echo "selected='selected'"; ?>>Rojo</option>
               </select>
             </div>
             <div class="form-group">
               <label for="inputInfo">Información para el usuario</label>
-              <input type="text" class="form-control" id="inputInfo" name="info" aria-describedby="emailHelp" placeholder="Ingrese el enlace donde se encuentra la información para el usuario" required>
+              <input type="text" class="form-control" id="inputInfo" name="info" value="<?php echo $conf['V_INFO']; ?>" placeholder="Ingrese el enlace donde se encuentra la información para el usuario" required>
             </div>
             <hr>
             <div class="form-group">
               <label for="inputFecha">Fecha de medición</label>
-              <input type="date" class="form-control" id="inputFecha" name="Fecha" placeholder="Ingrese fecha de medición" required>
+              <input type="date" class="form-control" id="inputFecha" value="<?php echo $fecha; ?>" name="Fecha" placeholder="Ingrese fecha de medición" required>
             </div>
             <div class="form-group">
               <label for="inputTime">Hora de medición</label>
-              <input type="time" class="form-control" id="inputHora" name="Hora" placeholder="Ingrese hora de medición" required>
+              <input type="time" class="form-control" id="inputHora" value="<?php echo $conf['V_HORA']; ?>" name="Hora" placeholder="Ingrese hora de medición" required>
             </div>
             <button type="submit" class="btn btn-success">Actualizar</button>
             <a href="menu.php" class="btn btn-primary">Regresar</a>
