@@ -41,6 +41,10 @@
               <label for="inputCO">CO</label>
               <input type="text" class="form-control" id="inputCO" name="CO" placeholder="Ingrese CO" required>
             </div>
+            <div class="form-group">
+              <label for="inputInformacion">Información para el usuario</label>
+              <input type="text" class="form-control" id="inputInformacion" name="info" placeholder="Ingrese el enlace donde se encuentra la información para el usuario" required>
+            </div>
             <hr>
             <div class="form-group">
               <label for="inputFecha">Fecha de medición</label>

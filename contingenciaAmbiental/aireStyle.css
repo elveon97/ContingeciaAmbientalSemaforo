@@ -180,3 +180,8 @@
   display: flex;
   flex-flow: column;
 }
+
+.aire-anchor {
+  text-decoration: none;
+  color: black;
+}

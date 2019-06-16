@@ -32,6 +32,10 @@
               <label for="inputFase">Fase</label>
               <input type="number" class="form-control" id="inputFase" name="Fase" aria-describedby="emailHelp" placeholder="Ingrese fase" required>
             </div>
+            <div class="form-group">
+              <label for="inputInfo">Información para el usuario</label>
+              <input type="text" class="form-control" id="inputInfo" name="info" aria-describedby="emailHelp" placeholder="Ingrese el enlace donde se encuentra la información para el usuario" required>
+            </div>
             <hr>
             <div class="form-group">
               <label for="inputFecha">Fecha de medición</label>

@@ -17,12 +17,14 @@
     $cad .= "A_HORA = " . $conf['A_HORA'] . "\n";
     $cad .= "A_SEM = " . $conf['A_SEM'] . "\n";
     $cad .= "A_VAL = " . $conf['A_VAL'] . "\n";
+    $cad .= "A_INFO = " . $conf['A_INFO'] . "\n";
 
     $cad .= "V_FASE = " . $conf['V_FASE'] . "\n";
     $cad .= "V_DIA = " . $conf['V_DIA'] . "\n";
     $cad .= "V_MES = " . $conf['V_MES'] . "\n";
     $cad .= "V_ANO = " . $conf['V_ANO'] . "\n";
     $cad .= "V_HORA = " . $conf['V_HORA'] . "\n";
+    $cad .= "V_INFO = " . $conf['V_INFO'] . "\n";
 
     $cad .= "NOMBRE = " . $_POST['Nombre'] . "\n";
     $cad .= "CATEGORIA = " . $_POST['Categoria'] . "\n";
@@ -77,6 +79,7 @@
     $cad .= "H_MES = " . $aux2 . "\n";
     $cad .= "H_ANO = " . $ano . "\n";
     $cad .= "H_HORA = " . $_POST['Hora'] . "\n";
+    $cad .= "H_INFO = " . $_POST['info'];
 
   } else if ($form == 'Aire') {
     $cad .= "NOMBRE = " . $conf['NOMBRE'] . "\n";
@@ -89,12 +92,14 @@
     $cad .= "H_ANO = " . $conf['H_ANO'] . "\n";
     $cad .= "H_HORA = " . $conf['H_HORA'] . "\n";
     $cad .= "H_VAL = " . $conf['H_VAL'] . "\n";
+    $cad .= "H_INFO = " . $conf['H_INFO'] . "\n";
 
     $cad .= "V_FASE = " . $conf['V_FASE'] . "\n";
     $cad .= "V_DIA = " . $conf['V_DIA'] . "\n";
     $cad .= "V_MES = " . $conf['V_MES'] . "\n";
     $cad .= "V_ANO = " . $conf['V_ANO'] . "\n";
     $cad .= "V_HORA = " . $conf['V_HORA'] . "\n";
+    $cad .= "V_INFO = " . $conf['V_INFO'] . "\n";
 
     $cad .= "PM = " . $_POST['PM'] . "\n";
     $cad .= "MCG = " . $_POST['MCG'] . "\n";
@@ -172,7 +177,8 @@
     }
 
     $cad .= "A_SEM = " . $sem ."\n";
-    $cad .= "A_VAL = " . $valoracion;
+    $cad .= "A_VAL = " . $valoracion . "\n";
+    $cad .= "A_INFO = " . $_POST["info"];
 
   } else if($form == "Volcan") {
     $cad .= "PM = " . $conf['PM'] . "\n";
@@ -184,6 +190,7 @@
     $cad .= "A_HORA = " . $conf['A_HORA'] . "\n";
     $cad .= "A_SEM = " . $conf['A_SEM'] . "\n";
     $cad .= "A_VAL = " . $conf['A_VAL'] . "\n";
+    $cad .= "A_INFO = " . $conf['A_INFO'] . "\n";
 
     $cad .= "NOMBRE = " . $conf['NOMBRE'] . "\n";
     $cad .= "CATEGORIA = " . $conf['CATEGORIA'] . "\n";
@@ -195,6 +202,7 @@
     $cad .= "H_ANO = " . $conf['H_ANO'] . "\n";
     $cad .= "H_HORA = " . $conf['H_HORA'] . "\n";
     $cad .= "H_VAL = " . $conf['H_VAL'] . "\n";
+    $cad .= "H_INFO = " . $conf['H_INFO'] . "\n";
 
     $cad .= "V_FASE = " . $_POST['Fase'] . "\n";
 
@@ -244,6 +252,7 @@
     $cad .= "V_MES = " . $aux2 . "\n";
     $cad .= "V_ANO = " . $ano . "\n";
     $cad .= "V_HORA = " . $_POST['Hora'] . "\n";
+    $cad .= "V_INFO = " . $_POST['info'];
   }
 
   $myfile = fopen("aireConf.txt", "w");

@@ -53,6 +53,10 @@
               <label for="inputValoracion">Valoración</label>
               <input type="text" class="form-control" id="inputValoracion" name="Valoracion" placeholder="Ingrese valoración" required>
             </div>
+            <div class="form-group">
+              <label for="inputInfo">Información para el usuario</label>
+              <input type="text" class="form-control" id="inputInfo" name="info" placeholder="Ingrese el enlace donde se encuentra la información para el usuario" required>
+            </div>
             <hr>
             <div class="form-group">
               <label for="inputFecha">Fecha de publicación</label>

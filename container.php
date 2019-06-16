@@ -13,6 +13,7 @@
        $conf = parse_ini_file($fileName, true);
        if ($conf['USE'] == 'Aire') :
      ?>
+     <a href="<?php echo $conf['A_INFO'];?>" class="aire-anchor">
      <div class="aire-container">
        <div class="aire-wrap">
          <div class="aire-titulo-container">
@@ -55,7 +56,9 @@
          </div>
        </div>
      </div>
+     </a>
     <?php elseif($conf['USE'] == 'Huracanes'): ?>
+      <a href="<?php echo $conf['H_INFO'];?>" class="aire-anchor">
       <div class="aire-container">
         <div class="aire-wrap">
           <div class="aire-titulo-container">
@@ -118,7 +121,9 @@
           </div>
         </div>
       </div>
+      </a>
     <?php elseif($conf['USE'] == 'Volcan'): ?>
+      <a href="<?php echo $conf['V_INFO'];?>" class="aire-anchor">
       <div class="aire-container">
         <div class="aire-wrap">
           <div class="aire-titulo-container">
@@ -140,9 +145,10 @@
           </div>
         </div>
       </div>
+      </a>
     <?php endif; ?>
 
-    <a href="https://www.facebook.com/PCivilCusur/"><img src="imgContingenciaAmbiental/UIPC.png" style="width: 350px;" alt=""></a>     
+    <a href="https://www.facebook.com/PCivilCusur/"><img src="imgContingenciaAmbiental/UIPC.png" style="width: 350px;" alt=""></a>
 
   </body>
 </html>
