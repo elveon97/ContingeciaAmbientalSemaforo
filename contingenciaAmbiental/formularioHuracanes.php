@@ -46,8 +46,8 @@
               <input type="number" class="form-control" id="inputRachas" name="Rachas" placeholder="Ingrese rachas de viento en km/hr" required>
             </div>
             <div class="form-group">
-              <label for="inputM2">M^2</label>
-              <input type="number" class="form-control" id="inputM2" name="M2" placeholder="Ingrese M2" required>
+              <label for="inputM2">m²</label>
+              <input type="number" class="form-control" id="inputM2" name="M2" placeholder="Ingrese m²" required>
             </div>
             <div class="form-group">
               <label for="inputValoracion">Valoración</label>

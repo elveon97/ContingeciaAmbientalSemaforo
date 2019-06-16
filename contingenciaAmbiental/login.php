@@ -17,7 +17,7 @@
         <div class="col-4">
             <div class="card">
               <div class="card-header">
-                <h3>Calidad del aire CUSur</h3>
+                <h3>Contingencia ambiental CUSur</h3>
               </div>
               <div class="card-body">
                 <form action="handleSesion.php" method="post" autocomplete="off">
