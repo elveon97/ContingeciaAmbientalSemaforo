@@ -26,7 +26,7 @@
 
     <div class="container">
       <div class="row mb-4">
-        <img src="../imgContingenciaAmbiental/logo.jpg" alt="" style="width: 380px; height: 82px;">
+        <img src="logo.jpg" alt="" style="width: 380px; height: 82px;">
       </div>
 
       <div class="row">

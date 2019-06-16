@@ -12,47 +12,6 @@
 
   $fileName = "aireConf.txt";
   $conf = parse_ini_file($fileName, true);
-
-  $fecha = $conf['H_ANO'] . '-';
-  switch ($conf['H_MES']) {
-    case "enero":
-      $fecha .= "01";
-      break;
-    case "febrero":
-      $fecha .= "02";
-      break;
-    case "marzo":
-      $fecha .= "03";
-      break;
-    case "abril":
-      $fecha .= "04";
-      break;
-    case "mayo":
-      $fecha .= "05";
-      break;
-    case "junio":
-      $fecha .= "06";
-      break;
-    case "julio":
-      $fecha .= "07";
-      break;
-    case "agosto":
-      $fecha .= "08";
-      break;
-    case "septiembre":
-      $fecha .= "09";
-      break;
-    case "octubre":
-      $fecha .= "10";
-      break;
-    case "noviembre":
-      $fecha .= "11";
-      break;
-    case "diciembre":
-      $fecha .= "12";
-      break;
-  }
-  $fecha .= "-" . $conf['H_DIA'];
 ?>
 
 <!DOCTYPE html>
@@ -66,7 +25,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <img src="../imgContingenciaAmbiental/logo.jpg" alt="" style="width: 380px; height: 82px;">
+        <img src="logo.jpg" alt="" style="width: 380px; height: 82px;">
       </div>
       <div class="row">
         <h2 style="margin-top: 40px;">Medición de huracanes CUSur</h2>
@@ -104,13 +63,13 @@
               <input type="text" class="form-control" id="inputValoracion" value="<?php echo $conf['H_VAL']; ?>" name="Valoracion" placeholder="Ingrese valoración" required>
             </div>
             <div class="form-group">
-              <label for="inputInfo">Información para el usuario</label>
+              <label for="inputInfo">Enlace para el usuario</label>
               <input type="text" class="form-control" id="inputInfo" name="info" value="<?php echo $conf['H_INFO']; ?>" placeholder="Ingrese el enlace donde se encuentra la información para el usuario" required>
             </div>
             <hr>
             <div class="form-group">
               <label for="inputFecha">Fecha de publicación</label>
-              <input type="date" class="form-control" id="inputFecha" name="Fecha" value="<?php echo $fecha; ?>" placeholder="Ingrese fecha de medición" required>
+              <input type="date" class="form-control" id="inputFecha" name="Fecha" value="<?php echo $conf['H_FECHA_RAW']; ?>" placeholder="Ingrese fecha de medición" required>
             </div>
             <div class="form-group">
               <label for="inputTime">Hora de publicación</label>

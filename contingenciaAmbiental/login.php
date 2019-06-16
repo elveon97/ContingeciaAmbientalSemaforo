@@ -11,7 +11,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <img src="../imgContingenciaAmbiental/logo.jpg" alt="" style="width: 380px; height: 82px;">
+        <img src="logo.jpg" alt="" style="width: 380px; height: 82px;">
       </div>
       <div class="row justify-content-center align-items-center" style="height:80vh">
         <div class="col-4">

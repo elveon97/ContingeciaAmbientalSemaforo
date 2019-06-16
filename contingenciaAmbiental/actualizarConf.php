@@ -11,6 +11,7 @@
     $cad .= "PM = " . $conf['PM'] . "\n";
     $cad .= "MCG = " . $conf['MCG'] . "\n";
     $cad .= "CO = " . $conf['CO'] . "\n";
+    $cad .= "A_FECHA_RAW = " . $conf['A_FECHA_RAW'] . "\n";
     $cad .= "A_DIA = " . $conf['A_DIA'] . "\n";
     $cad .= "A_MES = " . $conf['A_MES'] . "\n";
     $cad .= "A_ANO = " . $conf['A_ANO'] . "\n";
@@ -21,6 +22,7 @@
 
     $cad .= "V_FASE = " . $conf['V_FASE'] . "\n";
     $cad .= "V_COLOR = " . $conf['V_COLOR'] . "\n";
+    $cad .= "V_FECHA_RAW = " . $conf['V_FECHA_RAW'] . "\n";
     $cad .= "V_DIA = " . $conf['V_DIA'] . "\n";
     $cad .= "V_MES = " . $conf['V_MES'] . "\n";
     $cad .= "V_ANO = " . $conf['V_ANO'] . "\n";
@@ -76,6 +78,7 @@
         break;
     }
 
+    $cad .= "H_FECHA_RAW = " . $_POST['Fecha'] . "\n";
     $cad .= "H_DIA = " . $dia . "\n";
     $cad .= "H_MES = " . $aux2 . "\n";
     $cad .= "H_ANO = " . $ano . "\n";
@@ -88,6 +91,7 @@
     $cad .= "UBICACION = " . $conf['UBICACION'] . "\n";
     $cad .= "RACHAS = " . $conf['RACHAS'] . "\n";
     $cad .= "M2 = " . $conf['M2'] . "\n";
+    $cad .= "H_FECHA_RAW = " . $conf['H_FECHA_RAW'] . "\n";
     $cad .= "H_DIA = " . $conf['H_DIA'] . "\n";
     $cad .= "H_MES = " . $conf['H_MES'] . "\n";
     $cad .= "H_ANO = " . $conf['H_ANO'] . "\n";
@@ -97,6 +101,7 @@
 
     $cad .= "V_FASE = " . $conf['V_FASE'] . "\n";
     $cad .= "V_COLOR = " . $conf['V_COLOR'] . "\n";
+    $cad .= "V_FECHA_RAW = " . $conf['V_FECHA_RAW'] . "\n";
     $cad .= "V_DIA = " . $conf['V_DIA'] . "\n";
     $cad .= "V_MES = " . $conf['V_MES'] . "\n";
     $cad .= "V_ANO = " . $conf['V_ANO'] . "\n";
@@ -149,6 +154,7 @@
         break;
     }
 
+    $cad .= "A_FECHA_RAW = " . $_POST['Fecha'] . "\n";
     $cad .= "A_DIA = " . $dia . "\n";
     $cad .= "A_MES = " . $aux2 . "\n";
     $cad .= "A_ANO = " . $ano . "\n";
@@ -186,6 +192,7 @@
     $cad .= "PM = " . $conf['PM'] . "\n";
     $cad .= "MCG = " . $conf['MCG'] . "\n";
     $cad .= "CO = " . $conf['CO'] . "\n";
+    $cad .= "A_FECHA_RAW = " . $conf['A_FECHA_RAW'] . "\n";
     $cad .= "A_DIA = " . $conf['A_DIA'] . "\n";
     $cad .= "A_MES = " . $conf['A_MES'] . "\n";
     $cad .= "A_ANO = " . $conf['A_ANO'] . "\n";
@@ -199,6 +206,7 @@
     $cad .= "UBICACION = " . $conf['UBICACION'] . "\n";
     $cad .= "RACHAS = " . $conf['RACHAS'] . "\n";
     $cad .= "M2 = " . $conf['M2'] . "\n";
+    $cad .= "H_FECHA_RAW = " . $conf['H_FECHA_RAW'] . "\n";
     $cad .= "H_DIA = " . $conf['H_DIA'] . "\n";
     $cad .= "H_MES = " . $conf['H_MES'] . "\n";
     $cad .= "H_ANO = " . $conf['H_ANO'] . "\n";
@@ -251,6 +259,7 @@
         break;
     }
 
+    $cad .= "V_FECHA_RAW = " . $_POST['Fecha'] . "\n";
     $cad .= "V_DIA = " . $dia . "\n";
     $cad .= "V_MES = " . $aux2 . "\n";
     $cad .= "V_ANO = " . $ano . "\n";
