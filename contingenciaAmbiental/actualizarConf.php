@@ -160,26 +160,26 @@
     $cad .= "A_ANO = " . $ano . "\n";
     $cad .= "A_HORA = " . $_POST['Hora'] . "\n";
 
-    $pm = intval($_POST['PM']);
+    $mcg = intval($_POST['MCG']);
 
     $sem = 0;
     $valoracion = "";
-    if ($pm <= 50 ) {
+    if ($mcg <= 50 ) {
       $sem = 1;
       $valoracion = "Bueno";
-    } else if ($pm > 50 && $pm <= 100) {
+    } else if ($mcg > 50 && $mcg <= 100) {
       $sem = 2;
       $valoracion = "Moderado";
-    } else if ($pm > 100 && $pm <= 150) {
+    } else if ($mcg > 100 && $mcg <= 150) {
       $sem = 3;
       $valoracion = "Poco saludable";
-    } else if ($pm > 150 && $pm <= 200) {
+    } else if ($mcg > 150 && $mcg <= 200) {
       $sem = 4;
       $valoracion = "Insalubre";
-    } else if ($pm > 200 && $pm <= 300) {
+    } else if ($mcg > 200 && $mcg <= 300) {
       $sem = 5;
       $valoracion = "Muy poco saludable";
-    } else if ($pm > 300) {
+    } else if ($mcg > 300) {
       $sem = 6;
       $valoracion = "Peligroso";
     }

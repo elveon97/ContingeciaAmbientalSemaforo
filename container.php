@@ -2,16 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Lol</title>
 
     <link rel="stylesheet" href="contingenciaAmbiental/aireStyle.css">
   </head>
   <body>
 
      <?php
-       $fileName = "contingenciaAmbiental/aireConf.txt";
-       $conf = parse_ini_file($fileName, true);
-       if ($conf['USE'] == 'Aire') :
+     $handle = fopen("contingenciaAmbiental/aireConf.txt", "r");
+     if ($handle) {
+       while (($line = fgets($handle)) !== false) {
+           $aux = explode(" = ", $line);
+           $conf[$aux[0]] = trim($aux[1]);
+       }
+
+       fclose($handle);
+     } else {
+
+     }
+     if ($conf['USE'] == 'Aire') :
      ?>
      <a href="<?php echo $conf['A_INFO'];?>" class="aire-anchor">
      <div class="aire-container">
@@ -122,7 +131,7 @@
         </div>
       </div>
       </a>
-    <?php elseif($conf['USE'] == 'Volcan'): ?>
+    <?php else: ?>
       <a href="<?php echo $conf['V_INFO'];?>" class="aire-anchor">
       <div class="aire-container">
         <div class="aire-wrap">
@@ -138,7 +147,7 @@
             </div>
           </div>
           <div class="huracan-img-wrap">
-            <img src="imgContingenciaAmbiental/volcan/semVol<?php echo $conf['V_COLOR']; ?>.png" alt="" style="width: 55%; height: 100%;">
+            <img src="imgContingenciaAmbiental/volcan/semVol<?php echo $conf['V_COLOR'];?>.png" alt="" style="width: 55%; height: 100%;">
           </div>
           <div class="aire-footer-container">
             Medición publicada el <?php echo $conf['V_DIA']; ?> de <?php echo $conf['V_MES']; ?> de <?php echo $conf['V_ANO']; ?>, a las <?php echo $conf['V_HORA']; ?> horas en el CUSur
