@@ -35,6 +35,7 @@
     $cad .= "RACHAS = " . $_POST['Rachas'] . "\n";
     $cad .= "M2 = " . $_POST['M2'] . "\n";
     $cad .= "H_VAL = " . $_POST['Valoracion'] . "\n";
+    $cad .= "SEMAFORO = " . $_POST['Semaforo'] . "\n";
 
     list($ano, $mes, $dia) = explode('-', $_POST['Fecha']);
     $aux2 = "";
@@ -98,6 +99,7 @@
     $cad .= "H_HORA = " . $conf['H_HORA'] . "\n";
     $cad .= "H_VAL = " . $conf['H_VAL'] . "\n";
     $cad .= "H_INFO = " . $conf['H_INFO'] . "\n";
+    $cad .= "SEMAFORO = " . $conf['SEMAFORO'] . "\n";
 
     $cad .= "V_FASE = " . $conf['V_FASE'] . "\n";
     $cad .= "V_COLOR = " . $conf['V_COLOR'] . "\n";
@@ -213,6 +215,7 @@
     $cad .= "H_HORA = " . $conf['H_HORA'] . "\n";
     $cad .= "H_VAL = " . $conf['H_VAL'] . "\n";
     $cad .= "H_INFO = " . $conf['H_INFO'] . "\n";
+    $cad .= "SEMAFORO = " . $conf['SEMAFORO'] . "\n";
 
     $cad .= "V_FASE = " . $_POST['Fase'] . "\n";
     $cad .= "V_COLOR = " . $_POST['color'] . "\n";

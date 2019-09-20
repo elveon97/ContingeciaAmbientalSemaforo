@@ -47,6 +47,16 @@
               </select>
             </div>
             <div class="form-group">
+              <label for="inputSemaforo">Semáforo</label>
+              <select class="form-control" name="Semaforo">
+                <option value="1" <?php if ($conf["SEMAFORO"] == "1") echo "selected='selected'"; ?>>1 - Azul</option>
+                <option value="2" <?php if ($conf["SEMAFORO"] == "2") echo "selected='selected'"; ?>>2 - Verde</option>
+                <option value="3" <?php if ($conf["SEMAFORO"] == "3") echo "selected='selected'"; ?>>3 - Amarillo</option>
+                <option value="4" <?php if ($conf["SEMAFORO"] == "4") echo "selected='selected'"; ?>>4 - Naranja</option>
+                <option value="5" <?php if ($conf["SEMAFORO"] == "5") echo "selected='selected'"; ?>>5 - Rojo</option>
+              </select>
+            </div>
+            <div class="form-group">
               <label for="inputUbicacion">Ubicación</label>
               <input type="text" class="form-control" id="inputUbicacion" value="<?php echo $conf['UBICACION']; ?>" name="Ubicacion" placeholder="Ingrese ubicación" required>
             </div>

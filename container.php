@@ -123,7 +123,7 @@
             <?php echo $conf['H_VAL']; ?>
           </div>
           <div class="huracan-img-wrap">
-            <img src="imgContingenciaAmbiental/huracan/semHur<?php echo $conf['CATEGORIA']; ?>.png" alt="" style="width: 80%; height: 100%;">
+            <img src="imgContingenciaAmbiental/huracan/semHur<?php echo $conf['SEMAFORO']; ?>.png" alt="" style="width: 80%; height: 100%;">
           </div>
           <div class="aire-footer-container">
             Medición publicada el <?php echo $conf['H_DIA']; ?> de <?php echo $conf['H_MES']; ?> de <?php echo $conf['H_ANO']; ?>, a las <?php echo $conf['H_HORA']; ?> horas en el CUSur

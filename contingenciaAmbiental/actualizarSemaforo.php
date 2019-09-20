@@ -37,6 +37,7 @@
   $cad .= "H_HORA = " . $conf['H_HORA'] . "\n";
   $cad .= "H_VAL = " . $conf['H_VAL'] . "\n";
   $cad .= "H_INFO = " . $conf['H_INFO'] . "\n";
+  $cad .= "SEMAFORO = " . $conf['SEMAFORO'] . "\n";
 
   $cad .= "USE = " . $_POST['Semaforo'];
 
