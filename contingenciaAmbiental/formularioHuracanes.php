@@ -39,6 +39,7 @@
             <div class="form-group">
               <label for="inputCategoria">Categoría</label>
               <select class="form-control" name="Categoria">
+                <option value="Ninguna" <?php if ($conf["CATEGORIA"] == "Ninguna") echo "selected='selected'"; ?>>Ninguna</option>
                 <option value="1" <?php if ($conf["CATEGORIA"] == "1") echo "selected='selected'"; ?>>1</option>
                 <option value="2" <?php if ($conf["CATEGORIA"] == "2") echo "selected='selected'"; ?>>2</option>
                 <option value="3" <?php if ($conf["CATEGORIA"] == "3") echo "selected='selected'"; ?>>3</option>

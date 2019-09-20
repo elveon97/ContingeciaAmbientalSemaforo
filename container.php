@@ -82,19 +82,20 @@
                 <?php echo $conf['NOMBRE']; ?>
               </div>
             </div>
-            <span class="aire-mid-bar"></span>
-
-            <div class="huracan-sm-section">
-              <div class="huracan-mid-title">
-                 Categoría:
+            <span class="aire-mid-bar"></span>            
+            <?php if ( !($conf['CATEGORIA'] == 'Ninguna') ) : ?>
+              <div class="huracan-sm-section">            
+                <div class="huracan-mid-title">
+                  Categoría:
+                </div>
+                <div class="huracan-section-cell huracan-categoria">
+                  <?php echo $conf['CATEGORIA']; ?>
+                </div>
               </div>
-              <div class="huracan-section-cell huracan-categoria">
-                <?php echo $conf['CATEGORIA']; ?>
-              </div>
-            </div>
-            <span class="aire-mid-bar"></span>
+              <span class="aire-mid-bar"></span>
+            <?php endif; ?>
 
-            <div class="huracan-lg-section">
+            <div class="huracan-lg-section" style="<?php if ($conf['CATEGORIA'] == 'Ninguna') echo "width: 55%;"; ?>">
               <div class="huracan-mid-title">
                  Ubicación:
               </div>
