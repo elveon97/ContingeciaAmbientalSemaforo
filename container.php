@@ -21,8 +21,7 @@
 
      }
      if ($conf['USE'] == 'Aire') :
-     ?>
-     <a href="<?php echo $conf['A_INFO'];?>" class="aire-anchor">
+     ?>     
      <div class="aire-container">
        <div class="aire-wrap">
          <div class="aire-titulo-container">
@@ -58,16 +57,16 @@
            </div>
          </div>
          <div class="aire-img-wrap">
+           <a href="<?php echo $conf['A_INFO'];?>" class="aire-anchor">
            <img src="imgContingenciaAmbiental/aire/sem<?php echo $conf["A_SEM"]; ?>.png" alt="" style="width: 98%; height: 100%;">
+           </a>
          </div>
          <div class="aire-footer-container">
            Medición realizada el <?php echo $conf['A_DIA']; ?> de <?php echo $conf['A_MES']; ?> de <?php echo $conf['A_ANO']; ?>, a las <?php echo $conf['A_HORA']; ?> en el CUSur
          </div>
        </div>
-     </div>
-     </a>
-    <?php elseif($conf['USE'] == 'Huracanes'): ?>
-      <a href="<?php echo $conf['H_INFO'];?>" class="aire-anchor">
+     </div>     
+    <?php elseif($conf['USE'] == 'Huracanes'): ?>      
       <div class="aire-container">
         <div class="aire-wrap">
           <div class="aire-titulo-container">
@@ -113,10 +112,10 @@
                 <?php echo $conf['RACHAS']; ?> Km/hr
               </div>
               <div class="huracan-mid-title">
-                Rachas de viento:
+                Cantidad de lluvia
               </div>
               <div class="huracan-section-sm-cell">
-                <?php echo $conf['M2']; ?> m²
+                <?php echo $conf['M2']; ?> L/m²
               </div>
             </div>
           </div>
@@ -124,16 +123,16 @@
             <?php echo $conf['H_VAL']; ?>
           </div>
           <div class="huracan-img-wrap">
-            <img src="imgContingenciaAmbiental/huracan/semHur<?php echo $conf['SEMAFORO']; ?>.png" alt="" style="width: 80%; height: 100%;">
+            <a href="<?php echo $conf['H_INFO'];?>" class="aire-anchor">
+              <img src="imgContingenciaAmbiental/huracan/semHur<?php echo $conf['SEMAFORO']; ?>.png" alt="" style="width: 80%; height: 100%;">
+            </a>
           </div>
           <div class="aire-footer-container">
             Medición publicada el <?php echo $conf['H_DIA']; ?> de <?php echo $conf['H_MES']; ?> de <?php echo $conf['H_ANO']; ?>, a las <?php echo $conf['H_HORA']; ?> horas en el CUSur
           </div>
         </div>
-      </div>
-      </a>
-    <?php else: ?>
-      <a href="<?php echo $conf['V_INFO'];?>" class="aire-anchor">
+      </div>      
+    <?php else: ?>      
       <div class="aire-container">
         <div class="aire-wrap">
           <div class="aire-titulo-container">
@@ -148,14 +147,15 @@
             </div>
           </div>
           <div class="huracan-img-wrap">
+            <a href="<?php echo $conf['V_INFO'];?>" class="aire-anchor">
             <img src="imgContingenciaAmbiental/volcan/semVol<?php echo $conf['V_COLOR'];?>.png" alt="" style="width: 55%; height: 100%;">
+            </a>
           </div>
           <div class="aire-footer-container">
             Medición publicada el <?php echo $conf['V_DIA']; ?> de <?php echo $conf['V_MES']; ?> de <?php echo $conf['V_ANO']; ?>, a las <?php echo $conf['V_HORA']; ?> horas en el CUSur
           </div>
         </div>
-      </div>
-      </a>
+      </div>      
     <?php endif; ?>
 
     <a href="https://www.facebook.com/PCivilCusur/"><img src="imgContingenciaAmbiental/UIPC.png" style="width: 350px;" alt=""></a>

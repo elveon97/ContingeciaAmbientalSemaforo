@@ -66,8 +66,8 @@
               <input type="number" class="form-control" id="inputRachas" value="<?php echo $conf['RACHAS']; ?>" name="Rachas" placeholder="Ingrese rachas de viento en km/hr" required>
             </div>
             <div class="form-group">
-              <label for="inputM2">m²</label>
-              <input type="number" class="form-control" id="inputM2" value="<?php echo $conf['M2']; ?>" name="M2" placeholder="Ingrese m²" required>
+              <label for="inputM2">Cantidad de lluvia (L/m²)</label>
+              <input type="number" class="form-control" id="inputM2" value="<?php echo $conf['M2']; ?>" name="M2" placeholder="Ingrese cantidad de lluvia en L/m²" required>
             </div>
             <div class="form-group">
               <label for="inputValoracion">Valoración</label>
